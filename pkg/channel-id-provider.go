@@ -8,9 +8,8 @@ import (
 	"context"
 
 	"github.com/bborbe/errors"
-	"github.com/golang/glog"
-
 	"github.com/bborbe/notification/discord"
+	"github.com/golang/glog"
 )
 
 type ChannelIDProvider interface {
@@ -52,7 +51,7 @@ func NewChannelIDProvider(
 			default:
 				return nil, errors.Wrapf(
 					ctx,
-					MultipleChannelFoundError,
+					ErrMultipleChannelFound,
 					"found multiple channels for name '%s'",
 					name,
 				)

@@ -9,9 +9,8 @@ import (
 
 	"github.com/bborbe/errors"
 	libkv "github.com/bborbe/kv"
-	"github.com/golang/glog"
-
 	"github.com/bborbe/notification/discord"
+	"github.com/golang/glog"
 )
 
 // ChannelIDProviderTx is a transaction-aware version of ChannelIDProvider

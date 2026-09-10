@@ -14,13 +14,12 @@ import (
 	"github.com/bborbe/errors"
 	libkv "github.com/bborbe/kv"
 	libkvmocks "github.com/bborbe/kv/mocks"
-	. "github.com/onsi/ginkgo/v2"
-	. "github.com/onsi/gomega"
-
 	"github.com/bborbe/notification-discord/pkg"
 	"github.com/bborbe/notification-discord/pkg/commandhandler"
 	command "github.com/bborbe/notification/command/discord"
 	"github.com/bborbe/notification/discord"
+	. "github.com/onsi/ginkgo/v2"
+	. "github.com/onsi/gomega"
 )
 
 var _ = Describe("SendCommandObjectExecutor", func() {

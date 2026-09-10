@@ -7,10 +7,9 @@ package pkg
 import (
 	"context"
 
+	"github.com/bborbe/notification/discord"
 	"github.com/bborbe/validation"
 	"github.com/bwmarrin/discordgo"
-
-	"github.com/bborbe/notification/discord"
 )
 
 type Channels []Channel

@@ -8,9 +8,8 @@ import (
 	"context"
 
 	"github.com/bborbe/errors"
-	"github.com/bwmarrin/discordgo"
-
 	"github.com/bborbe/notification/discord"
+	"github.com/bwmarrin/discordgo"
 )
 
 //counterfeiter:generate -o mocks/channel-creator.go --fake-name ChannelCreator . ChannelCreator

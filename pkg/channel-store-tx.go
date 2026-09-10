@@ -9,9 +9,8 @@ import (
 
 	"github.com/bborbe/errors"
 	libkv "github.com/bborbe/kv"
-	"github.com/golang/glog"
-
 	"github.com/bborbe/notification/discord"
+	"github.com/golang/glog"
 )
 
 type ChannelStoreTx interface {
@@ -131,7 +130,7 @@ func (c *channelStoreTx) Get(
 	}
 	err = item.Value(func(val []byte) error {
 		if len(val) == 0 {
-			return ChannelNotFoundError
+			return ErrChannelNotFound
 		}
 		result = ChannelID(val).Ptr()
 		return nil

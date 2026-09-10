@@ -12,11 +12,10 @@ import (
 	cqrsiam "github.com/bborbe/cqrs/iam"
 	"github.com/bborbe/errors"
 	libkv "github.com/bborbe/kv"
-	"github.com/golang/glog"
-
 	"github.com/bborbe/notification-discord/pkg"
 	command "github.com/bborbe/notification/command/discord"
 	"github.com/bborbe/notification/iam"
+	"github.com/golang/glog"
 )
 
 func NewSendCommandObjectExecutor(

@@ -9,7 +9,6 @@ import (
 	"sync"
 
 	"github.com/bborbe/errors"
-
 	"github.com/bborbe/notification/discord"
 )
 

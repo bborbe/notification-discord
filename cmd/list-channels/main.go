@@ -12,14 +12,13 @@ import (
 
 	"github.com/bborbe/collection"
 	"github.com/bborbe/errors"
+	"github.com/bborbe/notification-discord/pkg"
+	libmetrics "github.com/bborbe/notification/metrics"
 	libsentry "github.com/bborbe/sentry"
 	"github.com/bborbe/service"
 	libtime "github.com/bborbe/time"
 	"github.com/bwmarrin/discordgo"
 	"github.com/golang/glog"
-
-	"github.com/bborbe/notification-discord/pkg"
-	libmetrics "github.com/bborbe/notification/metrics"
 )
 
 func main() {

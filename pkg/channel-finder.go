@@ -11,14 +11,13 @@ import (
 
 	"github.com/bborbe/collection"
 	"github.com/bborbe/errors"
-	"github.com/golang/glog"
-
 	"github.com/bborbe/notification/discord"
+	"github.com/golang/glog"
 )
 
-var ChannelNotFoundError = stderrors.New("channel not found")
+var ErrChannelNotFound = stderrors.New("channel not found")
 
-var MultipleChannelFoundError = stderrors.New("found multiple channels")
+var ErrMultipleChannelFound = stderrors.New("found multiple channels")
 
 //counterfeiter:generate -o mocks/channel-id-finder.go --fake-name ChannelIDFinder . ChannelIDFinder
 type ChannelIDFinder interface {
@@ -51,7 +50,7 @@ func (c *channelFinder) FindByName(
 			nameStr := strings.ToLower(name.String())
 			match := channelNameStr == nameStr
 			glog.V(4).Infof("compare channel '%s' == '%s' => %v", channelNameStr, nameStr, match)
-			if match == false {
+			if !match {
 				return nil
 			}
 			results = append(results, channel)

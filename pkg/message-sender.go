@@ -8,10 +8,9 @@ import (
 	"context"
 
 	"github.com/bborbe/errors"
+	"github.com/bborbe/notification/discord"
 	"github.com/bwmarrin/discordgo"
 	"github.com/golang/glog"
-
-	"github.com/bborbe/notification/discord"
 )
 
 type MessageSender interface {

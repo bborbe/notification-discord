@@ -15,6 +15,11 @@ import (
 	libhttp "github.com/bborbe/http"
 	libkafka "github.com/bborbe/kafka"
 	libkv "github.com/bborbe/kv"
+	"github.com/bborbe/notification-discord/pkg"
+	"github.com/bborbe/notification-discord/pkg/factory"
+	"github.com/bborbe/notification/db"
+	libfactory "github.com/bborbe/notification/factory"
+	libmetrics "github.com/bborbe/notification/metrics"
 	"github.com/bborbe/run"
 	libsentry "github.com/bborbe/sentry"
 	"github.com/bborbe/service"
@@ -23,12 +28,6 @@ import (
 	"github.com/golang/glog"
 	"github.com/gorilla/mux"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
-
-	"github.com/bborbe/notification-discord/pkg"
-	"github.com/bborbe/notification-discord/pkg/factory"
-	"github.com/bborbe/notification/db"
-	libfactory "github.com/bborbe/notification/factory"
-	libmetrics "github.com/bborbe/notification/metrics"
 )
 
 const serviceName = "core-discord-controller"

@@ -10,14 +10,13 @@ import (
 	"os"
 
 	"github.com/bborbe/errors"
+	"github.com/bborbe/notification-discord/pkg"
+	libmetrics "github.com/bborbe/notification/metrics"
 	libsentry "github.com/bborbe/sentry"
 	"github.com/bborbe/service"
 	libtime "github.com/bborbe/time"
 	"github.com/bwmarrin/discordgo"
 	"github.com/golang/glog"
-
-	"github.com/bborbe/notification-discord/pkg"
-	libmetrics "github.com/bborbe/notification/metrics"
 )
 
 func main() {
@@ -60,7 +59,7 @@ func (a *application) Run(ctx context.Context, sentryClient libsentry.Client) er
 	}
 	switch len(channels) {
 	case 0:
-		return pkg.ChannelNotFoundError
+		return pkg.ErrChannelNotFound
 	case 1:
 		if err := messageSender.Send(ctx, channels[0].ID, "hello world"); err != nil {
 			return errors.Wrapf(ctx, err, "send message failed")
@@ -68,7 +67,7 @@ func (a *application) Run(ctx context.Context, sentryClient libsentry.Client) er
 		glog.V(2).Infof("send completed")
 		return nil
 	default:
-		return pkg.MultipleChannelFoundError
+		return pkg.ErrMultipleChannelFound
 	}
 
 }

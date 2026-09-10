@@ -14,14 +14,13 @@ import (
 	libhttp "github.com/bborbe/http"
 	libkafka "github.com/bborbe/kafka"
 	libkv "github.com/bborbe/kv"
-	"github.com/bborbe/run"
-	libsentry "github.com/bborbe/sentry"
-	"github.com/bwmarrin/discordgo"
-
+	core "github.com/bborbe/notification"
 	"github.com/bborbe/notification-discord/pkg"
 	"github.com/bborbe/notification-discord/pkg/commandhandler"
 	"github.com/bborbe/notification-discord/pkg/handler"
-	"github.com/bborbe/notification"
+	"github.com/bborbe/run"
+	libsentry "github.com/bborbe/sentry"
+	"github.com/bwmarrin/discordgo"
 )
 
 func CreateCommandConsumer(

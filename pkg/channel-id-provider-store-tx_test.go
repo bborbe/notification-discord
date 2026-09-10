@@ -8,13 +8,12 @@ import (
 	"context"
 
 	libkv "github.com/bborbe/kv"
-	. "github.com/onsi/ginkgo/v2"
-	. "github.com/onsi/gomega"
-
 	"github.com/bborbe/notification-discord/pkg"
 	"github.com/bborbe/notification-discord/pkg/mocks"
 	"github.com/bborbe/notification/db"
 	"github.com/bborbe/notification/discord"
+	. "github.com/onsi/ginkgo/v2"
+	. "github.com/onsi/gomega"
 )
 
 var _ = Describe("ChannelIDProviderStoreTx", func() {

@@ -9,7 +9,6 @@ import (
 
 	"github.com/bborbe/errors"
 	libkv "github.com/bborbe/kv"
-
 	"github.com/bborbe/notification/discord"
 )
 

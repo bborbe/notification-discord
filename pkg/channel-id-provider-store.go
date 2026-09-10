@@ -8,9 +8,8 @@ import (
 	"context"
 
 	"github.com/bborbe/errors"
-	"github.com/golang/glog"
-
 	"github.com/bborbe/notification/discord"
+	"github.com/golang/glog"
 )
 
 func NewChannelIDProviderStore(

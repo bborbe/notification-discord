@@ -11,9 +11,8 @@ import (
 	"github.com/bborbe/collection"
 	"github.com/bborbe/errors"
 	libhttp "github.com/bborbe/http"
-	"github.com/golang/glog"
-
 	"github.com/bborbe/notification-discord/pkg"
+	"github.com/golang/glog"
 )
 
 func NewChannelUpdateHandler(

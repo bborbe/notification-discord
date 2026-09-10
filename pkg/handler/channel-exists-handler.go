@@ -10,9 +10,8 @@ import (
 
 	"github.com/bborbe/errors"
 	libhttp "github.com/bborbe/http"
-	"github.com/gorilla/mux"
-
 	"github.com/bborbe/notification-discord/pkg"
+	"github.com/gorilla/mux"
 )
 
 func NewChannelExistHandler(checker pkg.ChannelExistsChecker) http.Handler {
