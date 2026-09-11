@@ -8,6 +8,10 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## v0.1.2
+
+- fix: rebuild image from post-bump tree (v0.1.1 image was built from pre-bump code)
+
 ## v0.1.1
 
 - bump github.com/bborbe/notification to v0.2.0 (adds go-release notification type support)
