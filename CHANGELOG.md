@@ -8,6 +8,10 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## Unreleased
+
+- bump github.com/bborbe/notification to v0.2.0 (adds go-release notification type support)
+
 ## v0.1.0
 
 - feat: extract notification discord service from trading monorepo (sends notifications to Discord channels)
