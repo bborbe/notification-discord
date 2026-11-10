@@ -1,1 +1,4 @@
-export ROOTDIR ?= $(shell git rev-parse --show-toplevel)
+# Fall back to the current directory when git cannot answer: the prompt
+# container masks .git, and an empty ROOTDIR makes `include $(ROOTDIR)/tools.env`
+# resolve to /tools.env and fail the whole make surface.
+export ROOTDIR ?= $(shell git rev-parse --show-toplevel 2>/dev/null || pwd)
