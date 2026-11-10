@@ -1,2 +1,6 @@
 data/
 *.log
+/vendor
+/prompts/log
+/specs/log
+/.dark-factory.lock

@@ -8,6 +8,10 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## Unreleased
+
+- feat: add a cluster build arm so the image can be built in Kubernetes, not only on the Mac
+
 ## v0.1.6
 
 - chore(dark-factory): worktree workflow with PR delivery
