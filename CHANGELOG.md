@@ -11,7 +11,7 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 ## Unreleased
 
 - chore: remove stale vulnerability ignore IDs that no longer apply
-- ci: install Trivy from a pinned release tarball with sha256 verification (apt-key is gone from Ubuntu 26.04)
+- chore: install Trivy from a pinned sha256-verified release tarball (apt-key is gone from Ubuntu 26.04)
 
 ## v0.2.2
 
