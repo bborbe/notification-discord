@@ -8,6 +8,10 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## Unreleased
+
+- chore: bump `github.com/bborbe/kafka` v1.29.14 → v1.30.3, which classifies a broker network timeout (`i/o timeout`) as a transient broker-unreachable error. A Kafka consumer here previously reported every timed-out consume attempt to Sentry, so a single broker outage produced hundreds of captured events and exhausted the alert-proxy budget meant for real incidents.
+
 ## v0.2.3
 
 - chore: remove stale vulnerability ignore IDs that no longer apply

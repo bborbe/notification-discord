@@ -7,7 +7,7 @@ require (
 	github.com/bborbe/cqrs v0.6.16
 	github.com/bborbe/errors v1.6.6
 	github.com/bborbe/http v1.26.34
-	github.com/bborbe/kafka v1.29.14
+	github.com/bborbe/kafka v1.30.3
 	github.com/bborbe/kv v1.21.29
 	github.com/bborbe/notification v0.7.12
 	github.com/bborbe/run v1.11.11
